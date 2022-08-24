@@ -5,7 +5,6 @@ import createEmotionCache from "../config/createEmotionCache";
 import theme from "./../config/materialTheme";
 
 const clientSideEmotionCache = createEmotionCache();
-
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
