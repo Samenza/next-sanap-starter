@@ -1,0 +1,84 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "next",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "camelcase": "error",
+    "spaced-comment": "error",
+    "no-duplicate-imports": "error",
+    "array-callback-return": ["error", { "allowImplicit": true }],
+    "@typescript-eslint/no-explicit-any": ["off", { "ignoreRestArgs": false }],
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false,
+        "variables": true,
+        "allowNamedExports": false
+      }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "@mui/material",
+            "message": "Please import each material element separately => example:import TextFeild from '@mui/material/TextFeild'  ."
+          }
+        ]
+      }
+    ],
+    //react
+    "react/destructuring-assignment": ["error"],
+    "react/hook-use-state": ["error"],
+    "react/no-array-index-key": ["error"],
+    "react/jsx-boolean-value": ["error"],
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".jsx", "tsx"] }
+    ],
+    "react/jsx-no-leaked-render": ["error"],
+    "react/self-closing-comp": [
+      "warn",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "never", "children": "never", "propElementValues": "always" }
+    ],
+    "react/jsx-pascal-case": [
+      "error",
+      {
+        "allowAllCaps": false,
+        "allowNamespace": false,
+        "allowLeadingUnderscore": false
+      }
+    ],
+    "no-console": ["warn"],
+    //type-script
+    "@typescript-eslint/array-type": ["error"],
+    "@typescript-eslint/consistent-generic-constructors": [
+      "error",
+      "constructor"
+    ]
+  }
+}
