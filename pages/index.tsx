@@ -5,7 +5,9 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   const test1: [] = [];
-  test1.map((item) => {});
+  test1.map((item) => {
+    return {};
+  });
   return (
     <div className={styles.container}>
       <Head>
