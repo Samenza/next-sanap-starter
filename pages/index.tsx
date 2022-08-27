@@ -4,8 +4,8 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-  const test: [] = [];
-  test.map((item) => {});
+  const test1: [] = [];
+  test1.map((item) => {});
   return (
     <div className={styles.container}>
       <Head>
